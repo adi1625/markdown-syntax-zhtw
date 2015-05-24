@@ -1,26 +1,26 @@
-Markdown: Basics
+Markdown语法简版
 ================
 
-Getting the Gist of Markdown's Formatting Syntax
-------------------------------------------------
+这页是个快速入门，它提供了一些范例来让你很快的学会它；
 
-這頁提供了 Markdown 簡單的概觀給想使用的人， [語法說明][s] 頁提供了完整詳細的文件，說明每項功能，但是 Markdown 其實很簡單就可以上手，這頁文件提供了一些範例，並且每個範例都有提供輸出的 HTML 結果。
+[语法说明][s] 页提供了完整详细的文件，说明每项功能；
 
-其實直接試試看也是一個很不錯的方法， [Dingus][d] 是一個網頁應用程式，讓你可以把你的 Markdown 文件轉成 XHTML。
+每个范例都有提供输出的 预览 结果 及其 html 代码。
 
-**Note:** 這份文件本身也是用 Markdown 寫的，你也可以看看 [它的原始碼][src]
+想试写MarkDown的话， [Dingus][d] 是一个网页应用程式，让你可以把你的 Markdown 文件转成 XHTML。
 
-  [s]: http://markdown.tw  "Markdown Syntax"
+**Note:** 这份文件本身也是用 Markdown 写的，你也可以看看 [它的源码][src]
+
+  [s]: https://github.com/adi1625/markdown-syntax-zhtw/blob/master/syntax.md  "Markdown Syntax"
   [d]: http://daringfireball.net/projects/markdown/dingus  "Markdown Dingus"
-  [src]: https://github.com/othree/markdown-syntax-zhtw/blob/master/basics.md
+  [src]: https://github.com/adi1625/markdown-syntax-zhtw/blob/master/basics.md
 
-## 段落、標題、區塊程式碼 ##
+## 段落、标题、区块代码 ##
+一个段落是由一个以上的连接的行句组成，而一个以上的空行则会切分出不同的段落（空行的定义是显示上看起来像是空行，就被视为空行，例如有一行只有空白和 tab，那该行也会被视为空行），一般的段落不需要用空白或断行缩排。
 
-一個段落是由一個以上的連接的行句組成，而一個以上的空行則會切分出不同的段落（空行的定義是顯示上看起來像是空行，就被視為空行，例如有一行只有空白和 tab，那該行也會被視為空行），一般的段落不需要用空白或斷行縮排。
+Markdown 支援两种标题的语法，Setext 和 atx 形式。Setext 形式是用底线的形式，利用 `=` （最高阶标题）和 `-` （第二阶标题），Atx 形式在行首插入 1 到 6 个 `#` ，对应到标题 1 到 6 阶。
 
-Markdown 支援兩種標題的語法，Setext 和 atx 形式。Setext 形式是用底線的形式，利用 `=` （最高階標題）和 `-` （第二階標題），Atx 形式在行首插入 1 到 6 個 `#` ，對應到標題 1 到 6 階。
-
-區塊引言則使用 email 形式的 '`>`' 角括號。
+区块引言则使用 email 形式的 '`>`' 尖括号。
 
 Markdown:
 
@@ -45,7 +45,7 @@ Markdown:
     >
     > ## This is an H2 in a blockquote
 
-輸出：
+输出：
 
 A First Level Header
 ====================
@@ -94,9 +94,9 @@ dog's back.</p>
 ```
 
 
-### 修辭和強調 ###
+### 修辞和强调 ###
 
-Markdown 使用星號和底線來標記需要強調的區段。
+Markdown 使用星号和底线来标记需要强调的区段。
 
 Markdown:
 
@@ -106,7 +106,7 @@ Markdown:
     Use two asterisks for **strong emphasis**.
     Or, if you prefer, __use two underscores instead__.
 
-輸出:
+输出:
 
 Some of these words *are emphasized*.
 Some of these words _are emphasized also_.
@@ -124,27 +124,27 @@ Some of these words <em>are emphasized also</em>.</p>
 Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 ```
 
-## 清單 ##
+## 列表 ##
 
-無序清單使用星號、加號和減號來做為清單的項目標記，這些符號是都可以使用的，使用星號：
+无序列表使用星号、加号和减号来做为列表的项目标记，这些符号是都可以使用的，使用星号：
 
     *   Candy.
     *   Gum.
     *   Booze.
 
-加號：
+加号：
 
     +   Candy.
     +   Gum.
     +   Booze.
 
-和減號
+和减号
 
     -   Candy.
     -   Gum.
     -   Booze.
 
-都會輸出：
+都会输出：
 
 *   Candy.
 *   Gum.
@@ -160,13 +160,13 @@ Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 </ul>
 ```
 
-有序的清單則是使用一般的數字接著一個英文句點作為項目標記：
+有序的列表则是使用一般的数字接着一个英文句点作为项目标记：
 
     1.  Red
     2.  Green
     3.  Blue
 
-輸出：
+输出：
 
 1.  Red
 2.  Green
@@ -182,7 +182,7 @@ Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 </ol>
 ```
 
-如果你在項目之間插入空行，那項目的內容會備用 `<p>` 包起來，你也可以在一個項目內放上多個段落，只要在它前面縮排 4 個空白或 1 個 tab 。
+如果你在项目之间插入空行，那项目的内容会备用 `<p>` 包起来，你也可以在一个项目内放上多个段落，只要在它前面缩排 4 个空白或 1 个 tab 。
 
     *   A list item.
     
@@ -190,7 +190,7 @@ Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 
     *   Another item in the list.
 
-輸出：
+输出：
 
 *   A list item.
 
@@ -208,15 +208,15 @@ Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 </ul>
 ```
 
-### 連結 ###
+### 链接 ###
 
-Markdown 支援兩種形式的連結語法： *行內* 和 *參考* 兩種形式，兩種都是使用角括號來把文字轉成連結。
+Markdown 支援两种形式的链接语法： *行内* 和 *参考* 两种形式，两种都是使用方括号来把文字转成链接。
 
-行內形式形式是直接在後面用括號直接接上連結：
+行内形式形式是直接在后面用括号直接接上链接：
 
     This is an [example link](http://example.com/).
 
-輸出：
+输出：
 
 This is an [example link](http://example.com/).
 
@@ -226,11 +226,11 @@ This is an [example link](http://example.com/).
 <p>This is an <a href="http://example.com/">example link</a>.</p>
 ```
 
-你也可以選擇性的加上 title 屬性：
+你也可以选择性的加上 title 属性：
 
     This is an [example link](http://example.com/ "With a Title").
 
-輸出：
+输出：
 
 This is an [example link](http://example.com/ "With a Title").
 
@@ -241,7 +241,7 @@ This is an [example link](http://example.com/ "With a Title").
 example link</a>.</p>
 ```
 
-參考形式的連結讓你可以為連結定一個名稱，之後你可以在文件的其他地方定義該連結的內容：
+参考形式的链接让你可以为链接定一个名称，之后你可以在文件的其他地方定义该链接的内容：
 
     I get 10 times more traffic from [Google][1] than from
     [Yahoo][2] or [MSN][3].
@@ -250,7 +250,7 @@ example link</a>.</p>
     [2]: http://search.yahoo.com/  "Yahoo Search"
     [3]: http://search.msn.com/    "MSN Search"
 
-輸出：
+输出：
 
 I get 10 times more traffic from [Google][1] than from
 [Yahoo][2] or [MSN][3].
@@ -268,14 +268,14 @@ title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/"
 title="MSN Search">MSN</a>.</p>
 ```
 
-title 屬性是選擇性的，連結名稱可以用字母、數字和空格，但是不分大小寫：
+title 属性是选择性的，链接名称可以用字母、数字和空格，但是不分大小写：
 
     I start my morning with a cup of coffee and
     [The New York Times][NY Times].
 
     [ny times]: http://www.nytimes.com/
 
-輸出：
+输出：
 
 I start my morning with a cup of coffee and
 [The New York Times][NY Times].
@@ -290,21 +290,21 @@ I start my morning with a cup of coffee and
 ```
 
 
-### 圖片 ###
+### 图片 ###
 
-圖片的語法和連結很像。
+图片的语法和链接很像。
 
-行內形式（title 是選擇性的）：
+行内形式（title 是选择性的）：
 
     ![alt text](/path/to/img.jpg "Title")
 
-參考形式：
+参考形式：
 
     ![alt text][id]
 
     [id]: /path/to/img.jpg "Title"
 
-上面兩種方法都會輸出：
+上面两种方法都会输出：
 
 ![alt text](/path/to/img.jpg "Title")
 
@@ -314,16 +314,16 @@ I start my morning with a cup of coffee and
 <img src="/path/to/img.jpg" alt="alt text" title="Title" />
 ```
 
-### 程式碼 ###
+### 代码 ###
     
-在一般的段落文字中，你可以使用反引號 `` ` `` 來標記程式碼區段，區段內的 `&`、`<` 和 `>` 都會被自動的轉換成 HTML 實體，這項特性讓你可以很容易的在程式碼區段內插入 HTML 碼：
+在一般的段落文字中，你可以使用反引号 `` ` `` 来标记代码区段，区段内的 `&`、`<` 和 `>` 都会被自动的转换成 HTML 实体，这项特性让你可以很容易的在代码区段内插入 HTML 码：
 
     I strongly recommend against using any `<blink>` tags.
 
     I wish SmartyPants used named entities like `&mdash;`
     instead of decimal-encoded entites like `&#8212;`.
 
-輸出：
+输出：
 
 I strongly recommend against using any `<blink>` tags.
 
@@ -341,7 +341,7 @@ instead of decimal-encoded entites like `&#8212;`.
 entites like <code>&amp;#8212;</code>.</p>
 ```
 
-如果要建立一個已經格式化好的程式碼區塊，只要每行都縮排 4 個空格或是一個 tab 就可以了，而 `&`、`<` 和 `>` 也一樣會自動轉成 HTML 實體。
+如果要建立一个已经格式化好的代码区块，只要每行都缩排 4 个空格或是一个 tab 就可以了，而 `&`、`<` 和 `>` 也一样会自动转成 HTML 实体。
 
 Markdown:
 
@@ -352,7 +352,7 @@ Markdown:
             <p>For example.</p>
         </blockquote>
 
-輸出：
+输出：
 
 If you want your page to validate under XHTML 1.0 Strict,
 you've got to put paragraph tags in your blockquotes:
@@ -372,3 +372,4 @@ you've got to put paragraph tags in your blockquotes:</p>
 &lt;/blockquote&gt;
 </code></pre>
 ```
+
