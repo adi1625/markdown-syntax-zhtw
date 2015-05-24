@@ -1,1 +1,1 @@
-syntax.md
+basic.md
