@@ -1,1 +1,1 @@
-basic.md
+basics.md
